@@ -3,7 +3,7 @@ import string
 import requests
 import time
 
-print("Hello to my Minecraft IGN generator and checker!\nMade with love by 666bits <3")
+print("Hello to my Minecraft IGN generator and checker!\nMade with love by theplague676 <3")
 N = 3
 time.sleep(1)
 tries = int(input("How many IGNs would you like to generate: "))
