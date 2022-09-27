@@ -3,9 +3,8 @@ import string
 import requests
 import time
 
-print("Hello to my Minecraft IGN generator and checker!\nMade with love by theplague676 <3")
-N = 3
-time.sleep(1)
+print("Hello to my Minecraft IGN generator and checker!\nMade with love by WilliamAfton-codes <3")
+N = int(input("How long would you like each IGN to be?: "))
 tries = int(input("How many IGNs would you like to generate: "))
 for i in range(tries):
     ran_str = ''.join(random.choices(string.ascii_lowercase + string.digits + '_', k=N))
