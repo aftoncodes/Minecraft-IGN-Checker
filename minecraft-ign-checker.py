@@ -17,10 +17,10 @@ for i in range(tries):
         if tries == 0:
             if uuid is not None:
                 print('Sorry, no valid IGN found :(')
-                time.sleep(10)
+                input("[Process finished, press Enter to exit]")
         elif tries != 0:
             tries = tries
     elif uuid is None:
         print("Valid IGN found!", ran_str)
         break
-        time.sleep(10)
+        input("[Process finished, press Enter to exit]")
