@@ -1,13 +1,13 @@
 import random
-import string
 import requests
 import time
 
-print("Hello to my Minecraft IGN generator and checker!\nMade with love by WilliamAfton-codes <3")
-N = int(input("How long would you like each IGN to be?: "))
+N = 3
+print("Welcome to my Minecraft IGN generator and checker! Made with <3 by WilliamAfton-codes")
 tries = int(input("How many IGNs would you like to generate: "))
-for i in range(tries):
-    ran_str = ''.join(random.choices(string.ascii_lowercase + string.digits + '_', k=N))
+while True:
+    time.sleep(0.5)
+    ran_str = ''.join(random.choices('abcdefghijklmnopqrstuvwxyz1234567890_', k=N))
     url = f'https://api.mojang.com/users/profiles/minecraft/{ran_str}?'
     response = requests.get(url)
     uuid = response.json()['id']
@@ -17,10 +17,11 @@ for i in range(tries):
         if tries == 0:
             if uuid is not None:
                 print('Sorry, no valid IGN found :(')
-                input("[Process finished, press Enter to exit]")
+                input("[Press Enter to exit]")
+                break
         elif tries != 0:
             tries = tries
     elif uuid is None:
         print("Valid IGN found!", ran_str)
+        input("[Press Enter to exit.]")
         break
-        input("[Process finished, press Enter to exit]")
