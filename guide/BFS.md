@@ -15,5 +15,5 @@ cd Minecraft-IGN-Checker
 
 Step 3: Run minecraft-ign-checker.py:
 ```
-python minecraft-ign-checker.py
+python main.py
 ```
